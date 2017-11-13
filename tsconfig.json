@@ -1,0 +1,15 @@
+{
+    "compilerOptions":
+    {
+        "watch": true,
+        "target": "es5",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "alwaysStrict": true,
+        "pretty": true,
+        "sourceMap": true,
+        "baseUrl": "./",
+        "outDir": "out"
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Monoco-Editor Knockout Binding Handler</title>
+        <meta name="author" content="Tommy Simper">
+        <meta name="description" content="">
+        <meta name="date" content="2017-10-31">
+
+        <link href="https://microsoft.github.io/monaco-editor/lib/bootstrap-cosmo.css" rel="stylesheet" type="text/css">
+        <link href="https://microsoft.github.io/monaco-editor/lib/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+        <link href="https://microsoft.github.io/monaco-editor/all.css" rel="stylesheet" type="text/css">
+        <link href="https://microsoft.github.io/monaco-editor/index/index.css" rel="stylesheet" type="text/css">
+        <link type="text/css" href="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.css"
+        rel="stylesheet">
+
+        <!-- knockout -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" type="text/javascript"></script>
+
+        <!-- jquery -->
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+        <!-- monaco-editor -->
+        <script src="https://microsoft.github.io/monaco-editor/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="https://microsoft.github.io/monaco-editor/lib/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://microsoft.github.io/monaco-editor/lib/bootstrap-select.min.js" type="text/javascript"></script>
+
+        <style>
+            .me-editor {
+                width: 100%;
+                min-height: 300px;
+                border: 1px solid rgba(17, 129, 235, 0.849);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Knockout & Monaco Editor</h1>
+            <div class="me-editor" data-bind="koMonacoEditor: mainEditorText, meOptions: {language: 'javascript', theme: 'vs-dark', lineNumbers: 'on'}"></div>
+            <div>
+                <button data-bind="click: evalCode">Try It</button>
+            </div>
+        </div>
+
+        <!-- monaco loader and config -->
+        <script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/loader.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            require.config(
+            {
+                baseUrl: 'https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/'
+            } );
+        </script>
+
+        <!-- editor binding handler -->
+        <script src="./out/monacoEditorBindingHandler.js" type="text/javascript"></script>
+        <script src="./out/IndexViewModel.js" type="text/javascript"></script>
+    </body>
+</html>
