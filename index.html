@@ -39,7 +39,21 @@
     <body>
         <div>
             <h1>Knockout & Monaco Editor</h1>
-            <div class="me-editor" data-bind="koMonacoEditor: mainEditorText, meOptions: {language: 'javascript', theme: 'vs-dark', lineNumbers: 'on'}"></div>
+            <div class="me-editor" data-bind="koMonacoEditor: mainEditorText, 
+                                                              meOptions: {
+                                                                  language: 'javascript', 
+                                                                  theme: 'vs-dark', 
+                                                                  lineNumbers: 'on',
+                                                                  roundedSelection: true,
+                                                                  scrollBeyondLastLine: true,
+                                                                  fontSize: 20,
+                                                                  autoIndent: true,
+                                                                  folding: true,
+                                                                  mouseWheelZoom: true,
+                                                                  readOnly: false,
+                                                                  minimap: { enabled: false, showSlider: 'mouseover' }
+                                                              }"></div>
+
             <div>
                 <button data-bind="click: evalCode">Try It</button>
             </div>
