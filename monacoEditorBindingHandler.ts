@@ -7,8 +7,7 @@
  *
  * @summary   Monaco-editor knockout binding handler
  *
- * link:      http://simperfactory.visualstudio.com/_git/NWJS-AdobeCEP/app/scripts/moncaoEditorBindinghanlder.ts
- *            https://stackoverflow.com/questions/16204142/how-do-i-define-a-knockout-binding-handler-in-typescript
+ * link:      https://github.com/simpert/MonacoEditorKnockoutBindingHandler/blob/master/monacoEditorBindingHandler.ts
  * 
  * Author:    TSimper
  * Created:   2017-10-22 at 4:22 PM
